@@ -2,8 +2,12 @@ add_rules("mode.debug", "mode.release")
 
 set_languages("c++20")
 
+add_requires("qt6widgets")
+
 target("xmqt_pjc")
     add_rules("qt.widgetapp")
+    add_packages("qt6widgets")
+
     add_headerfiles("src/*.h")
     add_files("src/*.cpp")
     add_files("src/mainwindow.ui", "src/pure.ui")
