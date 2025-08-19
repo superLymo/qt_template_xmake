@@ -2,19 +2,19 @@ add_rules("mode.debug", "mode.release")
 
 set_languages("c++20")
 
-add_requires("qt6widgets")
+-- add_requires("qt6widgets")
 
 target("xmqt_pjc")
     add_rules("qt.widgetapp")
-    add_packages("qt6widgets")
+    -- add_packages("qt6widgets")
 
     add_headerfiles("src/*.h")
     add_files("src/*.cpp")
-    add_files("src/mainwindow.ui", "src/pure.ui")
+    add_files("src/mainwindow.ui")
     -- add files with Q_OBJECT meta (only for qt.moc)
     add_files("src/mainwindow.h")
 
-    add_ldflags("/SUBSYSTEM:CONSOLE")
+    -- add_ldflags("/SUBSYSTEM:CONSOLE")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
